@@ -3,12 +3,12 @@
   height: 100%;
   display: flex;
   margin: 10px;
-  img {
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-    object-position: center;
-  }
+}
+.product-detail img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-position: center;
 }
 
 @media (max-width: 830px) {
@@ -17,12 +17,12 @@
     flex-direction: column;
   }
 }
-
 .information-detail-product {
   width: 100%;
   background-color: black;
   color: white;
 }
+
 .information-detail-product ul {
   list-style: none;
   text-decoration: none;

@@ -38,6 +38,11 @@ const routes: Routes = [
     component: DemoComponent,
   },
   {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./page-not-found/page-not-found.module').then(

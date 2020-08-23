@@ -6,25 +6,60 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { LayoutModule } from '@angular/cdk/layout';
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     MatButtonModule,
+    MatGridListModule,
+    MatPaginatorModule,
+    MatInputModule,
+    MatSortModule,
+    MatSidenavModule,
+    MatMenuModule,
     MatToolbarModule,
+    MatSelectModule,
+    LayoutModule,
+    MatBadgeModule,
+    MatListModule,
+    MatRadioModule,
+    MatTableModule,
     MatIconModule,
     MatIconModule,
     MatCardModule,
     MatFormFieldModule,
   ],
   exports: [
+    CommonModule,
     MatButtonModule,
+    MatGridListModule,
+    LayoutModule,
+    MatPaginatorModule,
+    MatInputModule,
+    MatMenuModule,
+    MatSortModule,
+    MatSidenavModule,
     MatToolbarModule,
-    MatIconModule,
-    MatIconModule,
+    MatSelectModule,
     MatBadgeModule,
-    MatFormFieldModule,
+    MatListModule,
+    MatRadioModule,
+    MatTableModule,
+    MatIconModule,
+    MatIconModule,
     MatCardModule,
+    MatFormFieldModule,
   ],
 })
 export class MaterialModule {}

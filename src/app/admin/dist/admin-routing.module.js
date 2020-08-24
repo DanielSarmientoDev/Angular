@@ -14,6 +14,7 @@ var nav_component_1 = require("./components/nav/nav.component");
 var table_component_1 = require("./components/table/table.component");
 var dashboard_component_1 = require("./components/dashboard/dashboard.component");
 var products_list_component_1 = require("./components/products-list/products-list.component");
+var form_product_component_1 = require("./components/form-product/form-product.component");
 var routes = [
     {
         path: '',
@@ -34,6 +35,10 @@ var routes = [
             {
                 path: 'products',
                 component: products_list_component_1.ProductsListComponent
+            },
+            {
+                path: 'products/create',
+                component: form_product_component_1.FormProductComponent
             },
         ]
     },

@@ -33,12 +33,24 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-4">
-        <div class="box">
+        <div class="box" style="color: white; background-color: aquamarine;">
           <h3>Contacto</h3>
-          <!-- <mat-form-field color="accent" class="full-width">
-                  <input [formControl]="emailInput" matInput placeholder="Su correo" type="email">
-                </mat-form-field>
-                <button (click)="registerMail()" [disabled]="emailInput.invalid" mat-raised-button color="accent">Suscribirse</button> -->
+          <mat-form-field>
+            <input
+              matInput
+              [formControl]="emailField"
+              type="email"
+              placeholder="Digite su correo"
+              color="warn"
+            />
+          </mat-form-field>
+          <button
+            mat-raised-button
+            [disabled]="emailField.invalid"
+            (click)="sendEmail()"
+          >
+            enviar
+          </button>
         </div>
       </div>
     </div>

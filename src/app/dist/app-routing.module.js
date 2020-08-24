@@ -12,6 +12,7 @@ var router_1 = require("@angular/router");
 var demo_component_1 = require("./demo/demo.component");
 var layout_component_1 = require("./layout/layout.component");
 var admin_guard_1 = require("./admin.guard");
+var login_component_1 = require("./admin/components/login/login.component");
 var routes = [
     {
         path: '',
@@ -53,6 +54,10 @@ var routes = [
         loadChildren: function () {
             return Promise.resolve().then(function () { return require('./admin/admin.module'); }).then(function (m) { return m.AdminModule; });
         }
+    },
+    {
+        path: 'login',
+        component: login_component_1.LoginComponent
     },
     {
         path: '**',

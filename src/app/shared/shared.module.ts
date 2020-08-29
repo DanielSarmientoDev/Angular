@@ -2,7 +2,7 @@ import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
-import { HeaderComponent } from './components/header/header.component';
+import { BannerComponent } from './components/banner/banner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 
@@ -13,14 +13,14 @@ import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     ExponentialPipe,
-    HeaderComponent,
+    BannerComponent,
     HighlightDirective,
     FooterComponent,
   ],
   exports: [
     ExponentialPipe,
     HighlightDirective,
-    HeaderComponent,
+    BannerComponent,
     FooterComponent,
   ],
   imports: [

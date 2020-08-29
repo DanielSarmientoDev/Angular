@@ -26,6 +26,7 @@ var table_1 = require("@angular/material/table");
 var paginator_1 = require("@angular/material/paginator");
 var sort_1 = require("@angular/material/sort");
 var layout_1 = require("@angular/cdk/layout");
+var stepper_1 = require("@angular/material/stepper");
 var MaterialModule = /** @class */ (function () {
     function MaterialModule() {
     }
@@ -36,6 +37,7 @@ var MaterialModule = /** @class */ (function () {
                 common_1.CommonModule,
                 button_1.MatButtonModule,
                 grid_list_1.MatGridListModule,
+                stepper_1.MatStepperModule,
                 paginator_1.MatPaginatorModule,
                 input_1.MatInputModule,
                 sort_1.MatSortModule,
@@ -59,6 +61,7 @@ var MaterialModule = /** @class */ (function () {
                 grid_list_1.MatGridListModule,
                 layout_1.LayoutModule,
                 paginator_1.MatPaginatorModule,
+                stepper_1.MatStepperModule,
                 input_1.MatInputModule,
                 menu_1.MatMenuModule,
                 sort_1.MatSortModule,

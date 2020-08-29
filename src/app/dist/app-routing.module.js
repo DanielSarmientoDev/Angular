@@ -12,7 +12,6 @@ var router_1 = require("@angular/router");
 var demo_component_1 = require("./demo/demo.component");
 var layout_component_1 = require("./layout/layout.component");
 var admin_guard_1 = require("./admin.guard");
-var login_component_1 = require("./admin/components/login/login.component");
 var routes = [
     {
         path: '',
@@ -31,16 +30,20 @@ var routes = [
             },
             {
                 path: 'products',
-                canActivate: [admin_guard_1.AdminGuard],
                 loadChildren: function () {
                     return Promise.resolve().then(function () { return require('./product/product.module'); }).then(function (m) { return m.ProductModule; });
                 }
             },
             {
                 path: 'contact',
-                canActivate: [admin_guard_1.AdminGuard],
                 loadChildren: function () {
                     return Promise.resolve().then(function () { return require('./contact/contact.module'); }).then(function (m) { return m.ContactModule; });
+                }
+            },
+            {
+                path: 'order',
+                loadChildren: function () {
+                    return Promise.resolve().then(function () { return require('./order/order.module'); }).then(function (m) { return m.OrderModule; });
                 }
             },
         ]
@@ -51,13 +54,14 @@ var routes = [
     },
     {
         path: 'admin',
+        canActivate: [admin_guard_1.AdminGuard],
         loadChildren: function () {
             return Promise.resolve().then(function () { return require('./admin/admin.module'); }).then(function (m) { return m.AdminModule; });
         }
     },
     {
-        path: 'login',
-        component: login_component_1.LoginComponent
+        path: 'auth',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./auth/auth.module'); }).then(function (m) { return m.AuthModule; }); }
     },
     {
         path: '**',

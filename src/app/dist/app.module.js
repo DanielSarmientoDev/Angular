@@ -19,6 +19,10 @@ var shared_module_1 = require("./shared/shared.module");
 var core_module_1 = require("./core/core.module");
 var animations_1 = require("@angular/platform-browser/animations");
 var http_1 = require("@angular/common/http");
+var fire_1 = require("@angular/fire");
+var environment_1 = require("../environments/environment");
+var auth_1 = require("@angular/fire/auth");
+var storage_1 = require("@angular/fire/storage");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,6 +31,9 @@ var AppModule = /** @class */ (function () {
             declarations: [app_component_1.AppComponent, cart_component_1.CartComponent, demo_component_1.DemoComponent, layout_component_1.LayoutComponent],
             imports: [
                 platform_browser_1.BrowserModule,
+                auth_1.AngularFireAuthModule,
+                storage_1.AngularFireStorageModule,
+                fire_1.AngularFireModule.initializeApp(environment_1.environment.firebase),
                 app_routing_module_1.AppRoutingModule,
                 forms_1.FormsModule,
                 shared_module_1.SharedModule,

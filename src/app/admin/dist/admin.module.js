@@ -17,6 +17,8 @@ var table_component_1 = require("./components/table/table.component");
 var dashboard_component_1 = require("./components/dashboard/dashboard.component");
 var products_list_component_1 = require("./components/products-list/products-list.component");
 var material_module_1 = require("../material/material.module");
+var form_product_component_1 = require("./components/form-product/form-product.component");
+var product_edit_component_1 = require("./components/product-edit/product-edit.component");
 var AdminModule = /** @class */ (function () {
     function AdminModule() {
     }
@@ -28,6 +30,8 @@ var AdminModule = /** @class */ (function () {
                 table_component_1.TableComponent,
                 dashboard_component_1.DashboardComponent,
                 products_list_component_1.ProductsListComponent,
+                form_product_component_1.FormProductComponent,
+                product_edit_component_1.ProductEditComponent,
             ],
             imports: [
                 common_1.CommonModule,

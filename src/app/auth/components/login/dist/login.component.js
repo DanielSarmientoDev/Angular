@@ -10,20 +10,29 @@ exports.LoginComponent = void 0;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(formsBuilder) {
-        this.formsBuilder = formsBuilder;
-        this.buildFormLogin();
+    function LoginComponent(formBuilder, router, authService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.authService = authService;
+        this.buildForm();
     }
-    LoginComponent.prototype.ngOnInit = function () { };
-    LoginComponent.prototype.saveAccount = function (event) {
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent.prototype.login = function (event) {
+        var _this = this;
         event.preventDefault();
-        var a = this.form.value;
         if (this.form.valid) {
-            console.log(a);
+            var value = this.form.value;
+            this.authService.login(value.email, value.password)
+                .then(function () {
+                _this.router.navigate(['/admin']);
+            })["catch"](function () {
+                alert('no es valido');
+            });
         }
     };
-    LoginComponent.prototype.buildFormLogin = function () {
-        this.form = this.formsBuilder.group({
+    LoginComponent.prototype.buildForm = function () {
+        this.form = this.formBuilder.group({
             email: ['', [forms_1.Validators.required]],
             password: ['', [forms_1.Validators.required]]
         });

@@ -6,19 +6,13 @@
           <h3>Productos</h3>
           <ul>
             <li>
-              <a routerLink="/products" [queryParams]="{ type: 'news' }"
-                >Nuevos Productos</a
-              >
+              <a routerLink="/products" [queryParams]="{ type: 'news' }">Nuevos Productos</a>
             </li>
             <li>
-              <a routerLink="/products" [queryParams]="{ type: 'offer' }"
-                >En oferta</a
-              >
+              <a routerLink="/products" [queryParams]="{ type: 'offer' }">En oferta</a>
             </li>
             <li>
-              <a routerLink="/products" [queryParams]="{ type: 'latest' }"
-                >Últimos productos</a
-              >
+              <a routerLink="/products" [queryParams]="{ type: 'latest' }">Últimos productos</a>
             </li>
           </ul>
         </div>
@@ -33,22 +27,12 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-4">
-        <div class="box" style="color: white; background-color: aquamarine;">
+        <div class="box">
           <h3>Contacto</h3>
           <mat-form-field>
-            <input
-              matInput
-              [formControl]="emailField"
-              type="email"
-              placeholder="Digite su correo"
-              color="warn"
-            />
+            <input matInput [formControl]="emailField" type="email" placeholder="Digite su correo" color="warn" />
           </mat-form-field>
-          <button
-            mat-raised-button
-            [disabled]="emailField.invalid"
-            (click)="sendEmail()"
-          >
+          <button mat-raised-button [disabled]="emailField.invalid" (click)="sendEmail()">
             enviar
           </button>
         </div>

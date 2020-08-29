@@ -11,7 +11,7 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var exponential_pipe_1 = require("./pipes/exponential/exponential.pipe");
 var highlight_directive_1 = require("./directives/highlight/highlight.directive");
-var header_component_1 = require("./components/header/header.component");
+var banner_component_1 = require("./components/banner/banner.component");
 var footer_component_1 = require("./components/footer/footer.component");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
@@ -25,14 +25,14 @@ var SharedModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 exponential_pipe_1.ExponentialPipe,
-                header_component_1.HeaderComponent,
+                banner_component_1.BannerComponent,
                 highlight_directive_1.HighlightDirective,
                 footer_component_1.FooterComponent,
             ],
             exports: [
                 exponential_pipe_1.ExponentialPipe,
                 highlight_directive_1.HighlightDirective,
-                header_component_1.HeaderComponent,
+                banner_component_1.BannerComponent,
                 footer_component_1.FooterComponent,
             ],
             imports: [

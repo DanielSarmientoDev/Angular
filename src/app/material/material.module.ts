@@ -17,13 +17,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { LayoutModule } from '@angular/cdk/layout';
-
+import { MatStepperModule } from '@angular/material/stepper';
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     MatButtonModule,
     MatGridListModule,
+    MatStepperModule,
     MatPaginatorModule,
     MatInputModule,
     MatSortModule,
@@ -47,6 +48,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatGridListModule,
     LayoutModule,
     MatPaginatorModule,
+    MatStepperModule,
     MatInputModule,
     MatMenuModule,
     MatSortModule,

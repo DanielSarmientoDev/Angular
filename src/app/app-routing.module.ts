@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { DemoComponent } from './demo/demo.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AdminGuard } from './admin.guard';
-import { LoginComponent } from './admin/components/login/login.component';
 
 const routes: Routes = [
   {
@@ -22,15 +21,18 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        canActivate: [AdminGuard],
         loadChildren: () =>
           import('./product/product.module').then((m) => m.ProductModule),
       },
       {
         path: 'contact',
-        canActivate: [AdminGuard],
         loadChildren: () =>
           import('./contact/contact.module').then((m) => m.ContactModule),
+      },
+      {
+        path: 'order',
+        loadChildren: () =>
+          import('./order/order.module').then((m) => m.OrderModule),
       },
     ],
   },
@@ -40,12 +42,13 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AdminGuard],
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: '**',
